@@ -1,11 +1,14 @@
-import string
+"""
+assegnamento 1
+"""
 import time
 import matplotlib.pyplot as plt
 
 start = time.time()
-text = open(r'C:\Users\marco\OneDrive\Desktop\MCPDA\assegnamento1\pg66409.txt', 'r', encoding='utf-8')
-char = text.read()
-char = char.lower()
+with open(r'C:\Users\marco\OneDrive\Desktop\MCPDA\assegnamento1\pg66409.txt', 'r', encoding='utf-8') as text:
+    char = text.read()
+    char = char.lower()
+
 
 
 dz= {"a":0,"b":0,"c":0,"d":0,"e":0,"f":0,"g":0,"h":0,"i":0,"j":0,"k":0,"l":0,"m":0,"n":0,"o":0,"p":0,"q":0,"r":0,"s":0,"t":0,"u":0,"v":0,"w":0,"x":0,"y":0,"z":0}
@@ -15,8 +18,8 @@ dz= {"a":0,"b":0,"c":0,"d":0,"e":0,"f":0,"g":0,"h":0,"i":0,"j":0,"k":0,"l":0,"m"
 #se esiste in dizionario allora aggiorna numero in dizionario
 
 for i in char:
-  if i in dz:
-      dz[i]=dz[i]+1
+    if i in dz:
+        dz[i]=dz[i]+1
 
 #printa valori dizionario
 print (dz)
